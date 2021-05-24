@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace App.Models
 {
-    enum Classification {
+    public enum Classification {
         Freshman,
         Sophmore,
         Junior,
@@ -10,11 +10,11 @@ namespace App.Models
     }
     public class Student
     {
-        int id;
-        string FirstName;
-        string LastName;
-        int Age;
-        Classification Classification;
-        List<Grade> Grades;
+        public int Id;
+        public string FirstName;
+        public string LastName;
+        public int Age;
+        public Classification Classification;
+        public List<Grade> Grades;
     }
 }

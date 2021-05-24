@@ -4,13 +4,13 @@ namespace App.Models
 {
     public class Grade
     {
-        public int Id;
+        public int Id {get; set;}
 
-        public int StudentId;
+        public int StudentId {get; set;}
 
-        public string CourseName;
+        public string CourseName {get; set;}
 
         [Column(TypeName = "decimal(5, 2)")]
-        public float Value;
+        public float Value {get; set;}
     }
 }

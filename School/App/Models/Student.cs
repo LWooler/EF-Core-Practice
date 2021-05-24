@@ -10,11 +10,11 @@ namespace App.Models
     }
     public class Student
     {
-        public int Id;
-        public string FirstName;
-        public string LastName;
-        public int Age;
-        public Classification Classification;
-        public List<Grade> Grades;
+        public int Id {get; set;}
+        public string FirstName {get; set;}
+        public string LastName {get; set;}
+        public int Age {get; set;}
+        public Classification Classification {get; set;}
+        public List<Grade> Grades {get; set;}
     }
 }

@@ -12,5 +12,6 @@ namespace App.Models
 
         [Column(TypeName = "decimal(5, 2)")]
         public float Value {get; set;}
+        public Student Student {get; set;}  
     }
 }

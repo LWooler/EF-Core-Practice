@@ -32,6 +32,12 @@ namespace App
             // .Select(students => new {name = students.FirstName, gpa = students.Grades.GroupBy(test => test.StudentId).Average()});
             // Console.WriteLine(max_gpa);
 
+            Console.WriteLine("\nFind Students With Most Classes");
+            var most = database.Students.Include(student => student.Grades)
+                .Select(student => new {name = student.FirstName,count = student.Grades.Count()})
+                .OrderByDescending(group => group.count).FirstOrDefault();
+            Console.WriteLine($"Student Name: {most.name} {most.count}");
+            
             Console.WriteLine("\nFind Students With No Classes");
             database.Students.Include(student => student.Grades).Where(student => student.Grades.Count == 0).ToList().ForEach(student =>
                 Console.WriteLine($"Student Name: {student.FirstName} {student.LastName}")
